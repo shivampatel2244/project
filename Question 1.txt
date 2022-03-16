@@ -1,0 +1,220 @@
+function checkLeapYear(year) 
+{
+const leap = new Date(year, 1, 29).getDate() == 29;
+    	if (leap) 
+{
+        		console.log(year + ' is a leap year');
+    	} 
+Else
+ {
+        		console.log(year + ' is not a leap year');
+    	}
+}
+const year = prompt('Enter a year:');
+checkLeapYear(year);
+
+5.	Create a nod.js file which takes command line input to print Series 3,6,9……100.
+
+var i;
+for(i=3;i<=100;i+=3)
+{
+console.log(i);
+}
+
+6.	Create a nod.js file which takes command line input to print the factorial of the number.
+
+function factorial(n)
+{
+ if(n == 0 || n == 1)
+{
+        		return 1;
+     	}
+else
+{
+        		return n * factorial(n-1);
+    	}
+}
+let n = 4;
+answer = factorial(n)
+console.log("The factorial of " + n + " is " + answer);
+
+7.	Create a nod.js file which takes command line input to print the 
+palindrome function checkPalindrome(word){
+		var I = word.length;
+		for(var i = 0;i<I/2;i++){
+		if(word.charAt(i)!==word.charAt(I - 1 - i)){
+			return false;
+			}
+		}
+		return true;
+	}if(checkPalindrome("1210")){
+		console.log("The Digits is a Palindrome");
+	}else{
+		console.log("The Digits is Not a Palindrome");
+	}number.
+
+8.	Create following program using modules in node.js. 
+                                                                  
+1. create new file :-
+var fs=require('fs');
+var data='learn node fs module';
+fs.writeFile('Mayur.txt',data,function(err){
+			if(err) throw err;
+			console.log('file is created sucessfully.')
+});
+
+2. write content in to the file :-
+				const fs = require('fs')
+const content = 'Some content!'
+fs.writeFile('test.txt', content, err => {
+ 				if (err) {
+console.error(err)
+  		 		 return
+  				}
+});
+3. Read file content :-
+var fs=require('fs');
+		fs.readFile('sampleFile.html',function(err,data){
+		if(err)throw err;
+		console.log(data.toString('utf8')
+});
+4. Append new content to file  :-
+ 			var fs= require('fs');
+fs.appendFile('Mayur.txt','node JS example',function (err)
+{
+				if (err)throw err;
+				console.log("data saved succesfully")
+});
+5. rename file :-
+var fs = require('fs');
+fs.rename('sample.txt', 'sample_old.txt', function (err) 
+{
+  if (err) throw err;
+  		console.log('File Renamed.');
+});
+6. Delete file :-
+var fs=require('fs');
+fs.unlink('Mayur.txt',function(err){
+	if(err)throw err;
+	console.log('file is deleted.');
+});
+
+9.	Create a simple calculator using NodeJs.
+
+Function Call :-
+var calculator = require('./Calc');
+var x=50,y=20;
+console.log("Addition : "+calculator.add(x,y));
+console.log("Substraction : "+calculator.sub(x,y));
+console.log("Multiplication : "+calculator.mul(x,y));
+console.log("Division : "+calculator.div(x,y));
+	
+Create Function :-
+exports.add=function(x,y)
+{
+			return x+y;
+};
+exports.subtract=function(x,y)
+{
+			return x-y;
+};
+
+exports.multiply=function(x,y)
+{
+			return x*y;
+};
+
+exports.division=function(x,y)
+{
+			return x/y;
+};
+
+
+
+
+
+
+<html>    
+    <head>    
+    <title>    
+        Simple Calculator    
+    </title>    
+<script src="jquery-3.1.1.min.js">script>    
+    <script>    
+        $(document).ready(function(){    
+            $("#btnAdd").on('click',function(){    
+                Add();    
+            });    
+            $("#btnSubstract").on('click',function(){    
+                Substract();    
+            })    
+            $("#btnMultiply").on('click',function(){    
+                Multiply();    
+            })    
+            $("#btnDivide").on('click',function(){    
+                Divide();    
+            })    
+        });    
+        function Add(){    
+         var no1=parseInt($("#txtNo1").val());    
+         var no2=parseInt($("#txtNo2").val());    
+         var result =no1+no2;    
+          alert("The result is "+result);    
+        }    
+        function Substract(){    
+         var no1=parseInt($("#txtNo1").val());    
+         var no2=parseInt($("#txtNo2").val());    
+         var result =no1-no2;    
+          alert("The result is "+result);    
+        }    
+     
+   function Multiply(){    
+         var no1=parseInt($("#txtNo1").val());    
+         var no2=parseInt($("#txtNo2").val());    
+         var result =no1*no2;    
+          alert("The result is "+result);    
+        }    
+        function Divide(){    
+         var no1=parseInt($("#txtNo1").val());    
+         var no2=parseInt($("#txtNo2").val());    
+         var result =no1/no2;    
+          alert("The result is "+result);    
+        }    
+    </script>    
+    </head>    
+    <body>    
+       First Number <input type="text" id="txtNo1" placeholder="Enter first number"><br>    
+        Second Number<input type="text" id="txtNo2" placeholder="Enter second number"><br>    
+        <input type="button" id="btnAdd" value="Add">    
+        <input type="button" id="btnSubstract" value="Substract">    
+        <input type="button" id="btnMultiply" value="Multiply">    
+        <input type="button" id="btnDivide" value="Divide">    
+    </body>    
+    </html>   
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>Loading Data </title>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#box").load("/examples/html/test.html");
+    });
+});
+</script>
+</head>
+<body>
+    <div id="box">
+        <h2>Click button to load new content inside DIV box</h2>
+    </div>
+    <button type="button">Load Content</button>
+</body></html>
